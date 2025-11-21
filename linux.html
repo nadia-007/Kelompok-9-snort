@@ -27,7 +27,7 @@
  
 <div class="logo-small-container" role="tablist" aria-label="Popular Linux Distributions">
   <div class="logo-small active" role="tab" tabindex="0" aria-selected="true" aria-controls="arch-panel" id="arch-tab" data-id="arch">
-    <img src="img/ArchLinux.png" alt="Logo Arch Linux"/>
+    <img src="img/ArchLinux-removebg-preview.png" alt="Logo Arch Linux"/>
     <div>
       <div class="label">ARCH</div>
       <small>About</small>
@@ -48,7 +48,7 @@
     </div>
   </div>
   <div class="logo-small" role="tab" tabindex="-1" aria-selected="false" aria-controls="kali-panel" id="kali-tab" data-id="kali">
-    <img src="img/KaliLinux.png" alt="Logo Kali" />
+    <img src="img/KaliLinux-removebg-preview.png" alt="Logo Kali" />
     <div>
       <div class="label">KALI</div>
       <small>About</small>
@@ -59,7 +59,7 @@
 <section id="arch-panel" class="distro-detail active" role="tabpanel" aria-labelledby="arch-tab" tabindex="0">
   <div class="distro-content">
     <div class="distro-logo-large">
-      <img src="img/ArchLinux.png" alt="Logo Arch Linux" />
+      <img src="img/ArchLinux-removebg-preview.png" alt="Logo Arch Linux" />
     </div>
     <div class="distro-text">
       <div style="text-align: justify">
@@ -87,7 +87,6 @@
   </div>
 </section>
 
-<!-- Detail Distro: Ubuntu -->
 <section id="ubuntu-panel" class="distro-detail" role="tabpanel" aria-labelledby="ubuntu-tab" tabindex="0">
   <div class="distro-content">
     <div class="distro-logo-large">
@@ -119,7 +118,7 @@
     </div>
     </div>
 </section>
-<!-- Detail Distro: Mint -->
+
 <section id="mint-panel" class="distro-detail" role="tabpanel" aria-labelledby="mint-tab" tabindex="0">
   <div class="distro-content">
     <div class="distro-logo-large">
@@ -150,11 +149,11 @@
   </div>
 </section>
 
-<!-- Detail Distro: Kali -->
+
 <section id="kali-panel" class="distro-detail" role="tabpanel" aria-labelledby="kali-tab" tabindex="0">
   <div class="distro-content">
     <div class="distro-logo-large">
-      <img src="img/KaliLinux.png" alt="Logo Kali Linux" />
+      <img src="img/KaliLinux-removebg-preview.png" alt="Logo Kali Linux" />
     </div>
     <div class="distro-text">
       <div style="text-align: justify">
@@ -179,26 +178,23 @@
 
  
 	<script type="text/javascript">
-		// deklarasi tombol dan menu
+
 		const tombol = document.querySelector('.tombol');
 		const menu = document.querySelector('.menu');
  
-		// membuat event click
-		// pada saat tombol di click, tambahkan class aktif pada class menu
-		// saat diklik lagi, maka class aktif dihilangkan dari class menu (toggle)
 		tombol.addEventListener('click', () => {
 			menu.classList.toggle('aktif');
 		});
 	</script>
 
 <script>
-  // JavaScript untuk pergantian konten pada klik logo kecil dengan animasi
+ 
   document.addEventListener('DOMContentLoaded', function () {
     const logos = document.querySelectorAll('.logo-small');
     const panels = document.querySelectorAll('.distro-detail');
 
     function activatePanel(id) {
-      // Matikan semua
+   
       logos.forEach(logo => {
         const selected = logo.getAttribute('data-id') === id;
         logo.classList.toggle('active', selected);
@@ -209,7 +205,7 @@
         if(panel.id === id + '-panel') {
           panel.classList.add('active');
           panel.setAttribute('tabindex', '0');
-          // Memindahkan fokus ke panel konten untuk aksesibilitas
+         
           panel.focus();
         } else {
           panel.classList.remove('active');
@@ -224,7 +220,7 @@
         activatePanel(id);
       });
       logo.addEventListener('keydown', (e) => {
-        // Keyboard navigasi: left and right arrows
+        
         if(e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
           e.preventDefault();
           let index = Array.from(logos).indexOf(document.activeElement);

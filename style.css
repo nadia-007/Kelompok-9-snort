@@ -93,7 +93,7 @@ body {
     display: block;
   }
 
-  /* Container utama: grid responsif */
+ 
 .logo-small-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
@@ -102,7 +102,7 @@ body {
   padding: 20px;
 }
 
-/* Card logo */
+
 .logo-small {
   display: flex;
   flex-direction: column;
@@ -118,32 +118,32 @@ body {
   text-align: center;
 }
 
-/* Card aktif */
+
 .logo-small.active {
   background: #e0e0e0;
   transform: scale(1.05);
 }
 
-/* Logo image */
+
 .logo-small img {
   width: 60px;
   height: auto;
   object-fit: contain;
 }
 
-/* Label distro */
+
 .logo-small .label {
   font-weight: bold;
   font-size: 18px;
 }
 
-/* Hover effect */
+
 .logo-small:hover {
   background: #e6e6e6;
   transform: translateY(-3px);
 }
 
-/* Responsif mobile */
+
 @media (max-width: 480px) {
   .logo-small-container {
     grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
@@ -210,9 +210,9 @@ body {
   }
   .distro-text p {
     margin: 6px 0;
-    white-space: pre-line; /* maintain line breaks */
+    white-space: pre-line; 
   }
-  /* Dua kolom untuk distribusi & loren ipsum pada masing-masing */
+  
   .distro-text {
     display: flex;
     gap: 40px;
@@ -227,7 +227,7 @@ body {
     white-space: pre-line;
   }
 
-  /* Responsive */
+ 
   @media (max-width: 900px) {
     .distro-content {
       flex-direction: column;
