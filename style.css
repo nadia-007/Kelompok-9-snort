@@ -1,0 +1,225 @@
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background: #fffcd2;
+}
+.navbar{
+	background: #212121;
+	margin: 0;
+	padding: 20px 30px;
+}
+ 
+.logo{
+	font-size: 14pt;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+}
+
+.distro-logo-linux{
+    flex: 0 0 260px;
+    background: white;
+    padding: 80px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.distro-linux{
+    flex: 0 0 260px;
+    background: #fffcd2;
+    padding: 80px;
+}
+
+.logo-small-container {
+    display: flex;
+    gap: 300px;
+    margin-bottom: 50px;
+    user-select: none;
+  }
+
+  .logo-small {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    transition: transform 0.3s ease;
+  }
+
+  .logo-small.active {
+    transform: scale(1.2);
+  }
+
+  .logo-small img {
+    width: 28px;
+    height: 28px;
+    transition: filter 0.3s ease;
+    border-radius: 2px;
+  }
+
+  .logo-small:hover img {
+    filter: drop-shadow(0 0 5px #ed935e);
+  }
+
+  .logo-small .label {
+    font-weight: 700;
+  }
+
+  .logo-small small {
+    display: block;
+    font-size: 9px;
+    color: #666;
+    line-height: 1.1;
+  }
+
+ 
+.container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.distro-detail {
+    display: none;
+    animation: fadeInContent 0.5s forwards;
+    margin-bottom: 55px;
+  }
+  .distro-detail.active {
+    display: block;
+  }
+
+  @keyframes fadeInContent {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .distro-content {
+    flex: 0 0 260px;
+    background: #fffcd2;
+    padding: 80px;
+  }
+  .distro-logo-large {
+    flex: 0 0 260px;
+    background: white;
+    padding: 80px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .distro-logo-large img {
+    max-width: 100%;
+    max-height: 260px;
+  }
+  .distro-text {
+    flex: 1 1 600px;
+    font-size: 13px;
+    line-height: 1.45;
+    color: #444;
+  }
+  .distro-text h3 {
+    margin-top: 0;
+  }
+  .distro-text strong {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 5px;
+  }
+  .distro-text p {
+    margin: 6px 0;
+    white-space: pre-line; /* maintain line breaks */
+  }
+  /* Dua kolom untuk distribusi & loren ipsum pada masing-masing */
+  .distro-text {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+  }
+  .coloum {
+    flex: 1 1 300px;
+    font-size: 11px;
+    color: #555;
+    line-height: 1.4;
+    white-space: pre-line;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .distro-content {
+      flex-direction: column;
+    }
+    .distro-logo-large, .distro-text {
+      flex: 1 1 100%;
+    }
+    .distro-text {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+ 
+.tombol{
+	display: none;
+	color: white;
+	font-size: 14pt;			
+}
+ 
+.tombol:hover{
+	cursor: pointer;
+}
+ 
+ 
+.menu{
+	margin: 0;
+	display: flex;
+	list-style: none;
+	padding: 0;			
+}
+ 
+.menu li{
+	padding-left: 0;
+	margin-right: 10px;
+}
+ 
+.menu li a{
+	padding:10px;
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+}
+ 
+ 
+@media screen and (max-width: 768px) {
+	.menu {
+		display: none;
+	}
+ 
+	.menu.aktif{
+		display:inline-block;
+		position: absolute;
+		top: 64px;
+		background: #212121;
+		padding: 10px 20px;
+		right: 0;
+		left: 0;
+	}
+ 
+	.menu.aktif li a{
+		padding: 10px;
+		display: inline-block !important;
+	}
+ 
+	.tombol {
+		display: block;
+	}
+}
