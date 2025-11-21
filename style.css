@@ -93,6 +93,77 @@ body {
     display: block;
   }
 
+  /* Container utama: grid responsif */
+.logo-small-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 16px;
+  justify-items: center;
+  padding: 20px;
+}
+
+/* Card logo */
+.logo-small {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 15px;
+  border-radius: 12px;
+  background: #f5f5f5;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 100%;
+  max-width: 160px;
+  text-align: center;
+}
+
+/* Card aktif */
+.logo-small.active {
+  background: #e0e0e0;
+  transform: scale(1.05);
+}
+
+/* Logo image */
+.logo-small img {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Label distro */
+.logo-small .label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Hover effect */
+.logo-small:hover {
+  background: #e6e6e6;
+  transform: translateY(-3px);
+}
+
+/* Responsif mobile */
+@media (max-width: 480px) {
+  .logo-small-container {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  }
+
+  .logo-small {
+    padding: 12px;
+    max-width: 140px;
+  }
+
+  .logo-small img {
+    width: 50px;
+  }
+
+  .logo-small .label {
+    font-size: 16px;
+  }
+}
+
+
   @keyframes fadeInContent {
     from {
       opacity: 0;
@@ -111,17 +182,17 @@ body {
   }
   .distro-logo-large {
     flex: 0 0 260px;
-    background: white;
-    padding: 80px;
+    background: rgba(255, 255, 255, 0);
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .distro-logo-large img {
-    max-width: 100%;
-    max-height: 260px;
+    max-width: 800%;
+    max-height: 150px;
   }
   .distro-text {
     flex: 1 1 600px;
